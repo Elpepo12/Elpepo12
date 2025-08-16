@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Casa Inteligente</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="login-screen" class="card">
+    <h1>Iniciar sesión</h1>
+    <input id="user" type="text" placeholder="Usuario" />
+    <input id="pass" type="password" placeholder="Contraseña" />
+    <button id="login-btn">Entrar</button>
+    <p id="login-error" class="error hidden">Credenciales inválidas</p>
+  </div>
+
+  <div id="dashboard" class="hidden">
+    <header>
+      <h1>Panel de Vivienda</h1>
+      <button id="logout">Salir</button>
+    </header>
+    <div class="house">
+      <div class="room" id="living">
+        <h2>Salón</h2>
+        <p>Temp: <span class="temp">--</span> °C</p>
+        <p>Hum: <span class="hum">--</span> %</p>
+        <button class="toggle" data-endpoint="living-light">Luz</button>
+      </div>
+      <div class="room" id="kitchen">
+        <h2>Cocina</h2>
+        <p>Temp: <span class="temp">--</span> °C</p>
+        <p>Gas: <span class="gas">--</span> ppm</p>
+        <button class="toggle" data-endpoint="kitchen-light">Luz</button>
+      </div>
+      <div class="room" id="bedroom">
+        <h2>Dormitorio</h2>
+        <p>Temp: <span class="temp">--</span> °C</p>
+        <p>Luz: <span class="lum">--</span> lx</p>
+        <button class="toggle" data-endpoint="bedroom-light">Luz</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
